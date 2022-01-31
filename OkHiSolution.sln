@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1778
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AndroidBinding", "AndroidBinding", "{F1AE4139-69BB-4F7B-B2AF-269B45CA0DDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OkHiCoreBinding", "OkHiCoreBinding\OkHiCoreBinding.csproj", "{E6020A5A-A2A1-4B61-A3C6-FA2746E50B5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6020A5A-A2A1-4B61-A3C6-FA2746E50B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6020A5A-A2A1-4B61-A3C6-FA2746E50B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6020A5A-A2A1-4B61-A3C6-FA2746E50B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6020A5A-A2A1-4B61-A3C6-FA2746E50B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6020A5A-A2A1-4B61-A3C6-FA2746E50B5F} = {F1AE4139-69BB-4F7B-B2AF-269B45CA0DDB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E91340B0-19FC-4BC4-B184-2FF9C3A20575}
+	EndGlobalSection
+EndGlobal
