@@ -1,0 +1,38 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <!--<attr path="/api/package[@name='io.okhi.android_okcollect']/class[@name='OkCollect']" name="obfuscated">false</attr>-->
+  <!--<add-node path="/api/package[@name='io.okhi.android_okcollect']/class[@name='OkCollect']">
+    <implements name="io.okhi.android_core.OkHiCore" name-generic-aware="io.okhi.android_core.OkHiCore"></implements>
+  </add-node>-->
+  <!--<add-node path="/api/package[@name='io.okhi.android_okcollect']">
+    <class abstract="false" deprecated="not deprecated" final="false" name="OkCollect" static="false" visibility="public" extends="io.okhi.android_okcollect.utilities.OkHiConfig">
+     
+    </class>
+  </add-node>
+  <add-node path="/api/package[@name='io.okhi.android_okcollect']">
+  <class abstract="false" deprecated="not deprecated" final="false" name="AuthListener" static="false" visibility="public" extends="java.lang.Object">
+    <constructor deprecated="not deprecated" final="false" name="AuthListener" static="false" type="java.lang.String" visibility="public" />
+    <field name="p0" type="java.lang.String" />
+  </class>
+  </add-node>-->
+
+  <!--<attr path="/api/package[@name='io.okhi.android_okcollect']/class[@name='OkCollect']" name="extends">io.okhi.android_core.OkHiCore</attr>
+  
+  <add-node path="/api/package[@name='io.okhi.android_okcollect']">
+    <class abstract="false" deprecated="not deprecated" final="false" b ="OkCollect" static="false" visibility="public" extends="io.okhi.android_core.OkHiCore">
+      <method abstract="false" deprecated="not deprecated" final="false" name="getActivity"  return="android.app.Activity" static="true" visibility="public">
+      </method>
+    </class>
+  </add-node>-->
+
+  <!--<attr path="/api/package[@name='io.okhi.android_okcollect.callbacks']/interface[@name='OkCollectCallback']/method[@name='onSuccess' and count(parameter)=2 and parameter[1][@type='OkHiUser'] and parameter[2][@type='OkHiLocation']]/parameter[1]" name="managedType">IO.Okhi.Android_core.Models.OkHiUser </attr>
+
+  <attr path="/api/package[@name='io.okhi.android_okcollect.callbacks']/interface[@name='OkCollectCallback']/method[@name='onSuccess' and count(parameter)=2 and parameter[1][@type='OkHiUser'] and parameter[2][@type='OkHiLocation']]/parameter[2]" name="managedType">IO.Okhi.Android_core.Models.OkHiLocation </attr>-->
+  
+</metadata>
