@@ -28,11 +28,8 @@ namespace SampleApp.Droid
 
             try
             {
-                //okhi = new OkHi(this);
-                //okCollect = new OkCollect.Builder(this)
-                //    .WithTheme(theme)
-                //    .WithConfig(config)
-                //    .Build();
+                okhi = new OkHi(this);
+                
             }
             catch (OkHiException exception)
             {

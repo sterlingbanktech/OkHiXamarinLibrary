@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D32B0D21-890C-4AAF-BB8A-109307B647C0}</ProjectGuid>
+    <ProjectGuid>{72C48622-0F9C-4A1C-8D9D-5F5422C61A37}</ProjectGuid>
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{77efb91c-a7e9-4b0e-a7c5-31eeec3c6d46}</TemplateGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OkHiBackgroundGeofencing</RootNamespace>
-    <AssemblyName>OkHiBackgroundGeofencing</AssemblyName>
+    <RootNamespace>MiniLogBinding</RootNamespace>
+    <AssemblyName>MiniLogBinding</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <Deterministic>True</Deterministic>
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
@@ -48,7 +48,6 @@
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
-    <LibraryProjectZip Include="Jars\android-background-geofencing-release.aar" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\Metadata.xml" />
@@ -56,19 +55,7 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OkHiCoreBinding\OkHiCoreBinding.csproj">
-      <Project>{e6020a5a-a2a1-4b61-a3c6-fa2746e50b5f}</Project>
-      <Name>OkHiCoreBinding</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SnappyDbBinding\SnappyDbBinding.csproj">
-      <Project>{690ba3d7-1c89-4f78-92d8-64d369f4d476}</Project>
-      <Name>SnappyDbBinding</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat">
-      <Version>1.4.1</Version>
-    </PackageReference>
+    <EmbeddedJar Include="Jars\com.esotericsoftware.minlog.minlog-1.2.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

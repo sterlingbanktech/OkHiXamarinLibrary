@@ -104,6 +104,18 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\KryoBinding\KryoBinding.csproj">
+      <Project>{298fc630-7e26-4ee2-9df8-0f4d35408fb7}</Project>
+      <Name>KryoBinding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MiniLogBinding\MiniLogBinding.csproj">
+      <Project>{72c48622-0f9c-4a1c-8d9d-5f5422c61a37}</Project>
+      <Name>MiniLogBinding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ObjenesisBinding\ObjenesisBinding.csproj">
+      <Project>{b81ef970-e77c-41f3-8aeb-dad190f44f87}</Project>
+      <Name>ObjenesisBinding</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\OkHiBackgroundGeofencing\OkHiBackgroundGeofencing.csproj">
       <Project>{d32b0d21-890c-4aaf-bb8a-109307b647c0}</Project>
       <Name>OkHiBackgroundGeofencing</Name>
@@ -119,6 +131,10 @@
     <ProjectReference Include="..\..\OkVerifyBinding\OkVerifyBinding.csproj">
       <Project>{c9b83021-a8c4-43a9-a0dc-d816f41ce04f}</Project>
       <Name>OkVerifyBinding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SnappyDbBinding\SnappyDbBinding.csproj">
+      <Project>{690ba3d7-1c89-4f78-92d8-64d369f4d476}</Project>
+      <Name>SnappyDbBinding</Name>
     </ProjectReference>
     <ProjectReference Include="..\SampleApp\SampleApp.csproj">
       <Project>{AE293381-2933-41F6-88F3-7637DC046636}</Project>

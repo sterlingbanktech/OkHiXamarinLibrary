@@ -15,6 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SampleApp.Droid.Services.OkLocationService))]
@@ -24,10 +25,9 @@ namespace SampleApp.Droid.Services
     public class OkLocationService : IOkLocationService
     {
         Activity CurrentActivity;
-        OkHi okHi;
         private IO.Okhi.Android_okcollect.OkCollect okCollect;
         private OkHiConfig config;
-        private OkHi okhi;
+        private OkHi okHi;
         private OkHiTheme theme;
        private IO.Okhi.Android_okverify.OkVerify okVerify;
         private OkCollectCallback okCollectCallback;
@@ -78,8 +78,8 @@ namespace SampleApp.Droid.Services
                         .WithLastName(lastName)
                         .Build();
 
-                    OkHiLocation location = new OkHiLocation.Builder("test", 3.3, 4.4).Build();
-                    okCollectCallback.OnSuccess(user, location);
+                  //  OkHiLocation location = new OkHiLocation.Builder("test", 3.3, 4.4).Build();
+                  //  okCollectCallback.OnSuccess(user, location);
 
                     okCollect.Launch(user, okCollectCallback);
                 }
@@ -96,11 +96,11 @@ namespace SampleApp.Droid.Services
         private bool canStartAddressCreation()
         {
             RequestHandler requestHandler = new RequestHandler();
+
             // Check and request user to enable location services
             if (!OkHi.IsLocationServicesEnabled(CurrentActivity))
             {
-                OkHi.OpenLocationServicesSettings(CurrentActivity);
-                // okhi.requestEnableLocationServices(requestHandler);
+                okHi.RequestEnableLocationServices(requestHandler);
             }
             else if (!OkHi.IsGooglePlayServicesAvailable(CurrentActivity))
             {
@@ -112,11 +112,17 @@ namespace SampleApp.Droid.Services
                 // Check and request user to grant location permission
                 okHi.RequestLocationPermission("Hey we need location permissions", "Pretty please..", requestHandler);
             }
+            else if (!OkHi.IsBackgroundLocationPermissionGranted(CurrentActivity))
+            {
+                // Check and request user to grant location permission
+                okHi.RequestBackgroundLocationPermission("Hey we need location permissions", "Pretty please..", requestHandler);
+            }
             else
             {
                 return true;
             }
             return false;
+
         }
 
 
@@ -157,17 +163,26 @@ namespace SampleApp.Droid.Services
             startAddressVerification(user, location);
         }
 
-        private void startAddressVerification(OkHiUser user, OkHiLocation location)
+        private async void startAddressVerification(OkHiUser user, OkHiLocation location)
         {
+            var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+            if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
+            {
+                // Prompt the user to turn on in settings
+                // On iOS once a permission has been denied it may not be requested again from the application
+                await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+            }
             okVerify.Start(user, location, okVerifyCallback);
         }
     }
 
     public class OkVerifyCallback : Java.Lang.Object, IO.Okhi.Android_okverify.Interfaces.IOkVerifyCallback
     {
+       
         public void OnError(OkHiException p0)
         {
-           
+
+         
         }
 
         public void OnSuccess(Java.Lang.Object p0)
