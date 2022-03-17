@@ -6,4 +6,16 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+  
+  <!--NewInstantiatorOf-->
+  <add-node path="/api/package[@name='org.objenesis.strategy']/class[@name='BaseInstantiatorStrategy']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false" 
+            name="newInstantiatorOf" return="Org.Objenesis.Instantiator.IObjectInstantiator" static="false" synchronized="false" visibility="public">
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
 </metadata>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.sampleapp" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1002" android:versionName="1.0.0.1" package="com.companyname.sampleapp" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
@@ -7,7 +7,7 @@
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-	<application android:label="SampleApp.Android" android:theme="@style/MainTheme">
+	<application android:label="OkHi Sterling Sample" android:theme="@style/MainTheme">
 		<meta-data android:name="io.okhi.core.branch_id" android:value="a4UA1qfdwS" />
 		<meta-data android:name="io.okhi.core.client_key" android:value="82e4f359-752d-409a-bd6c-6fa8638ab455" />
 		<meta-data android:name="io.okhi.core.environment" android:value="sandbox" />

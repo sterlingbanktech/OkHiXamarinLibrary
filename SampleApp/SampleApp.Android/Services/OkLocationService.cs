@@ -24,46 +24,46 @@ namespace SampleApp.Droid.Services
 
     public class OkLocationService : IOkLocationService
     {
-        Activity CurrentActivity;
-        private IO.Okhi.Android_okcollect.OkCollect okCollect;
-        private OkHiConfig config;
-        private OkHi okHi;
-        private OkHiTheme theme;
-       private IO.Okhi.Android_okverify.OkVerify okVerify;
-        private OkCollectCallback okCollectCallback;
+        MainActivity CurrentActivity;
+       // private IO.Okhi.Android_okcollect.OkCollect okCollect;
+        //private OkHiConfig config;
+        //private OkHi okHi;
+        //private OkHiTheme theme;
+        //private OkVerify okVerify;
+       // private OkCollectCallback okCollectCallback;
         public OkLocationService()
         {
-            CurrentActivity = Xamarin.Essentials.Platform.CurrentActivity;
-            okHi = new OkHi(CurrentActivity);
-            okCollect = new IO.Okhi.Android_okcollect.OkCollect.Builder(CurrentActivity).Build();
-            okVerify = new IO.Okhi.Android_okverify.OkVerify.Builder(CurrentActivity).Build();
-            okCollectCallback = new OkCollectCallback(okVerify);
+            CurrentActivity = (MainActivity)Xamarin.Essentials.Platform.CurrentActivity;
+        //    okHi = new OkHi(CurrentActivity);
+          //  okCollect = new IO.Okhi.Android_okcollect.OkCollect.Builder(CurrentActivity).Build();
+           // okVerify = new IO.Okhi.Android_okverify.OkVerify.Builder(CurrentActivity).Build();
+        //    okCollectCallback = new OkCollectCallback(okVerify);
+        
 
-           
-            // Should be invoked one time on app start.
-            // (optional) OkHiNotification, use to start a foreground service to transmit verification signals to OkHi servers
-            int importance = Build.VERSION.SdkInt >=Android.OS.BuildVersionCodes.N ? (int)Android.App.NotificationImportance.Default : 3;
-           
-            OkVerify.Init(CurrentActivity, new OkHiNotification(
-                "Verifying your address",
-                "We're currently verifying your address. This won't take long",
-                "OkHi",
-                "OkHi Address Verification",
-                "Alerts related to any address verification updates",
-                importance,
-                1, // notificationId
-                2 // notification request code
-            ));
+        //    // Should be invoked one time on app start.
+        //    // (optional) OkHiNotification, use to start a foreground service to transmit verification signals to OkHi servers
+        //    int importance = Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.N ? (int)Android.App.NotificationImportance.Default : 3;
+
+        //    OkVerify.Init(CurrentActivity, new OkHiNotification(
+        //        "Verifying your address",
+        //        "We're currently verifying your address. This won't take long",
+        //        "OkHi",
+        //        "OkHi Address Verification",
+        //        "Alerts related to any address verification updates",
+        //        importance,
+        //        1, // notificationId
+        //        2 // notification request code
+        //    ));
 
 
-            theme = new OkHiTheme.Builder("#00fdaa")
-        .SetAppBarLogo("https://cdn.okhi.co/icon.png")
-        .SetAppBarColor("#ba0c2f")
-        .Build();
+        //    theme = new OkHiTheme.Builder("#00fdaa")
+        //.SetAppBarLogo("https://cdn.okhi.co/icon.png")
+        //.SetAppBarColor("#ba0c2f")
+        //.Build();
 
-            config = new OkHiConfig.Builder()
-        .WithStreetView()
-        .Build();
+        //    config = new OkHiConfig.Builder()
+        //.WithStreetView()
+        //.Build();
         }
         public string GetAddress(string phoneNumber, string firstName, string lastName)
         {
@@ -72,19 +72,19 @@ namespace SampleApp.Droid.Services
                 var canStart = this.canStartAddressCreation();
                 if (canStart)
                 {
-                    
+
                     OkHiUser user = new OkHiUser.Builder(phoneNumber)
                         .WithFirstName(firstName)
                         .WithLastName(lastName)
                         .Build();
 
-                  //  OkHiLocation location = new OkHiLocation.Builder("test", 3.3, 4.4).Build();
-                  //  okCollectCallback.OnSuccess(user, location);
+                    //  OkHiLocation location = new OkHiLocation.Builder("test", 3.3, 4.4).Build();
+                    //  okCollectCallback.OnSuccess(user, location);
 
-                    okCollect.Launch(user, okCollectCallback);
+                    CurrentActivity.okCollect.Launch(user, CurrentActivity.okCollectCallback);
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
 
                 return "";
@@ -100,22 +100,22 @@ namespace SampleApp.Droid.Services
             // Check and request user to enable location services
             if (!OkHi.IsLocationServicesEnabled(CurrentActivity))
             {
-                okHi.RequestEnableLocationServices(requestHandler);
+                CurrentActivity.okHi.RequestEnableLocationServices(requestHandler);
             }
             else if (!OkHi.IsGooglePlayServicesAvailable(CurrentActivity))
             {
                 // Check and request user to enable google play services
-                okHi.RequestEnableGooglePlayServices(requestHandler);
+                CurrentActivity.okHi.RequestEnableGooglePlayServices(requestHandler);
             }
             else if (!OkHi.IsLocationPermissionGranted(CurrentActivity))
             {
                 // Check and request user to grant location permission
-                okHi.RequestLocationPermission("Hey we need location permissions", "Pretty please..", requestHandler);
+                CurrentActivity.okHi.RequestLocationPermission("Hey we need location permissions", "Pretty please..", requestHandler);
             }
             else if (!OkHi.IsBackgroundLocationPermissionGranted(CurrentActivity))
             {
                 // Check and request user to grant location permission
-                okHi.RequestBackgroundLocationPermission("Hey we need location permissions", "Pretty please..", requestHandler);
+                CurrentActivity.okHi.RequestBackgroundLocationPermission("Hey we need location permissions", "Pretty please..", requestHandler);
             }
             else
             {
@@ -141,7 +141,7 @@ namespace SampleApp.Droid.Services
         }
     }
 
-    public class OkCollectCallback: Java.Lang.Object, IO.Okhi.Android_okcollect.Callbacks.IOkCollectCallback
+    public class OkCollectCallback : Java.Lang.Object, IO.Okhi.Android_okcollect.Callbacks.IOkCollectCallback
     {
         private readonly OkVerify okVerify;
         private OkVerifyCallback okVerifyCallback;
@@ -154,6 +154,10 @@ namespace SampleApp.Droid.Services
         public void OnError(OkHiException p0)
         {
             var errorMessage = p0.Message;
+            Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
+            {
+                App.Current.MainPage.DisplayAlert("Error", errorMessage, "OK");
+            });
         }
 
         public void OnSuccess(Java.Lang.Object p0, Java.Lang.Object p1)
@@ -178,16 +182,20 @@ namespace SampleApp.Droid.Services
 
     public class OkVerifyCallback : Java.Lang.Object, IO.Okhi.Android_okverify.Interfaces.IOkVerifyCallback
     {
-       
+
         public void OnError(OkHiException p0)
         {
+            var errorMessage = p0.Message;
+            Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
+            {
+                App.Current.MainPage.DisplayAlert("Error", errorMessage, "OK");
+            });
 
-         
         }
 
         public void OnSuccess(Java.Lang.Object p0)
         {
-           
+
         }
     }
 }

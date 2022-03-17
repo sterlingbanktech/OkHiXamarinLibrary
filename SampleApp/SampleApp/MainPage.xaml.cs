@@ -18,7 +18,7 @@ namespace SampleApp
         protected void Start(object sender,EventArgs e)
         {
             var okService = DependencyService.Get<IOkLocationService>();
-            okService.GetAddress("+2348038541905", "Olamide", "James");
+            okService.GetAddress(entPhoneNumber.Text, entFirstName.Text, entLastName.Text);
         }
     }
 }

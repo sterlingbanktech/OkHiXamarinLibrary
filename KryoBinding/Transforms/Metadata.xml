@@ -6,4 +6,1261 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+
+  <!--DefaultArraySerializers.BooleanArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.BooleanArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;boolean[]&gt;']]" />
+
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.BooleanArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='boolean[]']]" />
+
+  <!--CollectionSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='CollectionSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.util.Collection&gt;']]" />
+
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='CollectionSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.Collection']]" />
+
+  <!--DefaultArraySerializers.ByteArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ByteArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;byte[]&gt;']]" />
+
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ByteArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='byte[]']]" />
+
+
+  <!--CharArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.CharArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;char[]&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.CharArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='char[]']]"/>
+
+  <!--DoubleArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.DoubleArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;double[]&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.DoubleArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='double[]']]"/>
+
+  <!--DefaultArraySerializers.FloatArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.FloatArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;float[]&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.FloatArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='float[]']]"/>
+
+  <!--DefaultArraySerializers.IntArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.IntArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;int[]&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.IntArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='int[]']]"/>
+
+  <!--DefaultArraySerializers.LongArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.LongArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;long[]&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.LongArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='long[]']]"/>
+
+  <!--DefaultArraySerializers.ObjectArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ObjectArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Object[]&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ObjectArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Object[]']]"/>
+
+  <!--DefaultArraySerializers.ShortArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ShortArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;short[]&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ShortArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='short[]']]"/>
+
+  <!--DefaultArraySerializers.StringArraySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.StringArraySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.String[]&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.StringArraySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.String[]']]"/>
+
+  <!--DefaultSerializers.BigDecimalSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BigDecimalSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.math.BigDecimal&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BigDecimalSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.math.BigDecimal']]"/>
+
+  <!--DefaultSerializers.BigIntegerSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BigIntegerSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.math.BigInteger&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BigIntegerSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.math.BigInteger']]"/>
+
+  <!--DefaultSerializers.BooleanSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BooleanSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Boolean&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BooleanSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Boolean']]"/>
+
+  <!--DefaultSerializers.ByteSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ByteSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Byte&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ByteSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Byte']]"/>
+
+  <!--DefaultSerializers.CalendarSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CalendarSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.util.Calendar&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CalendarSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.Calendar']]"/>
+
+  <!--DefaultSerializers.CharSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CharSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Character&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CharSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Character']]"/>
+
+  <!--DefaultSerializers.ClassSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ClassSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Class&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ClassSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Class']]"/>
+
+  <!--DefaultSerializers.CollectionsSingletonListSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonListSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonListSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.List']]"/>
+
+  <!--DefaultSerializers.CollectionsSingletonMapSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonMapSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonMapSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.Map']]"/>
+
+  <!--DefaultSerializers.CollectionsSingletonSetSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonSetSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonSetSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.Set']]"/>
+
+  <!--DefaultSerializers.CurrencySerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CurrencySerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.util.Currency&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CurrencySerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.Currency']]"/>
+
+  <!--DefaultSerializers.DateSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.DateSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.util.Date&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.DateSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.Date']]"/>
+
+  <!--DefaultSerializers.DoubleSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.DoubleSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Double&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.DoubleSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Double']]"/>
+
+  <!--DefaultSerializers.EnumSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.EnumSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Enum&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.EnumSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Enum']]"/>
+
+  <!--DefaultSerializers.EnumSetSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.EnumSetSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.util.EnumSet&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.EnumSetSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.EnumSet']]"/>
+
+  <!--DefaultSerializers.FloatSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.FloatSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Float&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.FloatSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Float']]"/>
+
+
+  <!--DefaultSerializers.IntSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.IntSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Integer&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.IntSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Integer']]"/>
+
+  <!--DefaultSerializers.KryoSerializableSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.KryoSerializableSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;com.esotericsoftware.kryo.KryoSerializable&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.KryoSerializableSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='com.esotericsoftware.kryo.KryoSerializable']]"/>
+
+  <!--DefaultSerializers.LocaleSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.LocaleSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.util.Locale&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.LocaleSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.Locale']]"/>
+
+  <!--DefaultSerializers.LongSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.LongSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Long&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.LongSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Long']]"/>
+
+  <!--DefaultSerializers.ShortSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ShortSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.Short&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ShortSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.Short']]"/>
+
+  <!--DefaultSerializers.StringBufferSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringBufferSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.StringBuffer&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringBufferSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.StringBuffer']]"/>
+
+  <!--DefaultSerializers.StringBuilderSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringBuilderSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.StringBuilder&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringBuilderSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.StringBuilder']]"/>
+
+  <!--DefaultSerializers.StringSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.lang.String&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.lang.String']]"/>
+
+  <!--DefaultSerializers.TimeZoneSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.TimeZoneSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.util.TimeZone&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.TimeZoneSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.TimeZone']]"/>
+
+  <!--MapSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='MapSerializer']/method[@name='read' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Input'] and parameter[3][@type='java.lang.Class&lt;java.util.Map&gt;']]"/>
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='MapSerializer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='com.esotericsoftware.kryo.Kryo'] and parameter[2][@type='com.esotericsoftware.kryo.io.Output'] and parameter[3][@type='java.util.Map']]"/>
+
+  <!--FieldSerializer-->
+  <remove-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='FieldSerializer']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField'] and parameter[2][@type='com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField']]"/>
+
+
+  <!--DefaultArraySerializers.BooleanArraySerializer-->
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.BooleanArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.BooleanArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--CollectionSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='CollectionSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='CollectionSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultArraySerializers.ByteArraySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ByteArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ByteArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--CharArraySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.CharArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.CharArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DoubleArraySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.DoubleArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.DoubleArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+
+  <!--DefaultArraySerializers.FloatArraySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.FloatArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.FloatArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultArraySerializers.IntArraySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.IntArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.IntArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultArraySerializers.LongArraySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.LongArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.LongArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultArraySerializers.ObjectArraySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ObjectArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ObjectArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+
+  <!--DefaultArraySerializers.ShortArraySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ShortArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.ShortArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultArraySerializers.StringArraySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.StringArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultArraySerializers.StringArraySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+
+  <!--DefaultSerializers.BigDecimalSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BigDecimalSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BigDecimalSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+
+  <!--DefaultSerializers.BigIntegerSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BigIntegerSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BigIntegerSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+
+  <!--DefaultSerializers.BooleanSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BooleanSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.BooleanSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.ByteSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ByteSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ByteSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.CalendarSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CalendarSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CalendarSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.CharSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CharSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CharSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+
+  <!--DefaultSerializers.CharSerializer-->
+
+
+  <!--DefaultSerializers.ClassSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ClassSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ClassSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.CollectionsSingletonListSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonListSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonListSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.CollectionsSingletonMapSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonMapSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonMapSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+
+  <!--DefaultSerializers.CollectionsSingletonSetSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonSetSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CollectionsSingletonSetSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+
+  <!--DefaultSerializers.CurrencySerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CurrencySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.CurrencySerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+
+  <!--DefaultSerializers.DateSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.DateSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.DateSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.DoubleSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.DoubleSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.DoubleSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.EnumSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.EnumSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.EnumSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.EnumSetSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.EnumSetSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.EnumSetSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.FloatSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.FloatSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.FloatSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.IntSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.IntSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.IntSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.KryoSerializableSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.KryoSerializableSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.KryoSerializableSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.LocaleSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.LocaleSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.LocaleSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.LongSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.LongSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.LongSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.ShortSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ShortSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.ShortSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.StringBufferSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringBufferSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringBufferSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.StringBuilderSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringBuilderSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringBuilderSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.StringSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.StringSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--DefaultSerializers.TimeZoneSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.TimeZoneSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='DefaultSerializers.TimeZoneSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--MapSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='MapSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="read" return="Java.Lang.Object" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="input" type="com.esotericsoftware.kryo.io.Input"/>
+
+      <parameter name="class" type="Java.Lang.Class"/>
+
+    </method>
+
+  </add-node>
+
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='MapSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"  name="write" return="void" static="false" synchronized="false" visibility="public">
+
+      <parameter name="kryo" type="com.esotericsoftware.kryo.Kryo"/>
+
+      <parameter name="output" type="com.esotericsoftware.kryo.io.Output"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
+
+  <!--FieldSerializer-->
+  <add-node path="/api/package[@name='com.esotericsoftware.kryo.serializers']/class[@name='FieldSerializer']">
+
+    <method abstract="false" native="false" deprecated="not deprecated" final="false"
+            name="compare" return="int" static="false" synchronized="false" visibility="public">
+
+      <parameter name="output" type="Java.Lang.Object"/>
+
+      <parameter name="object" type="Java.Lang.Object"/>
+
+    </method>
+
+  </add-node>
 </metadata>

@@ -164,7 +164,7 @@
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
-    <LibraryProjectZip Include="Jars\android-okcollect-debug.aar" />
+    <LibraryProjectZip Include="Jars\android-okcollect-release.aar" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
