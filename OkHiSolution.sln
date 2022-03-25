@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32112.339
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AndroidBinding", "AndroidBinding", "{F1AE4139-69BB-4F7B-B2AF-269B45CA0DDB}"
 EndProject
@@ -28,6 +28,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniLogBinding", "MiniLogBinding\MiniLogBinding.csproj", "{72C48622-0F9C-4A1C-8D9D-5F5422C61A37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjenesisBinding", "ObjenesisBinding\ObjenesisBinding.csproj", "{B81EF970-E77C-41F3-8AEB-DAD190F44F87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{A291F3E9-DAE4-401E-9E7E-7A71762A63EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kryo", "Kryo\Kryo.csproj", "{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -175,6 +179,18 @@ Global
 		{B81EF970-E77C-41F3-8AEB-DAD190F44F87}.Release|iPhone.Build.0 = Release|Any CPU
 		{B81EF970-E77C-41F3-8AEB-DAD190F44F87}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{B81EF970-E77C-41F3-8AEB-DAD190F44F87}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Release|iPhone.Build.0 = Release|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,6 +207,7 @@ Global
 		{298FC630-7E26-4EE2-9DF8-0F4D35408FB7} = {F1AE4139-69BB-4F7B-B2AF-269B45CA0DDB}
 		{72C48622-0F9C-4A1C-8D9D-5F5422C61A37} = {F1AE4139-69BB-4F7B-B2AF-269B45CA0DDB}
 		{B81EF970-E77C-41F3-8AEB-DAD190F44F87} = {F1AE4139-69BB-4F7B-B2AF-269B45CA0DDB}
+		{9CBF8ACD-1CE6-42BE-9775-091B12056ABA} = {A291F3E9-DAE4-401E-9E7E-7A71762A63EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E91340B0-19FC-4BC4-B184-2FF9C3A20575}
