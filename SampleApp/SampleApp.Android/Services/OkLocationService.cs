@@ -34,36 +34,7 @@ namespace SampleApp.Droid.Services
         public OkLocationService()
         {
             CurrentActivity = (MainActivity)Xamarin.Essentials.Platform.CurrentActivity;
-        //    okHi = new OkHi(CurrentActivity);
-          //  okCollect = new IO.Okhi.Android_okcollect.OkCollect.Builder(CurrentActivity).Build();
-           // okVerify = new IO.Okhi.Android_okverify.OkVerify.Builder(CurrentActivity).Build();
-        //    okCollectCallback = new OkCollectCallback(okVerify);
-        
-
-        //    // Should be invoked one time on app start.
-        //    // (optional) OkHiNotification, use to start a foreground service to transmit verification signals to OkHi servers
-        //    int importance = Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.N ? (int)Android.App.NotificationImportance.Default : 3;
-
-        //    OkVerify.Init(CurrentActivity, new OkHiNotification(
-        //        "Verifying your address",
-        //        "We're currently verifying your address. This won't take long",
-        //        "OkHi",
-        //        "OkHi Address Verification",
-        //        "Alerts related to any address verification updates",
-        //        importance,
-        //        1, // notificationId
-        //        2 // notification request code
-        //    ));
-
-
-        //    theme = new OkHiTheme.Builder("#00fdaa")
-        //.SetAppBarLogo("https://cdn.okhi.co/icon.png")
-        //.SetAppBarColor("#ba0c2f")
-        //.Build();
-
-        //    config = new OkHiConfig.Builder()
-        //.WithStreetView()
-        //.Build();
+       
         }
         public string GetAddress(string phoneNumber, string firstName, string lastName)
         {
@@ -86,7 +57,7 @@ namespace SampleApp.Droid.Services
             }
             catch (Exception ex)
             {
-
+                ex.TrackError();
                 return "";
             }
 
@@ -132,7 +103,7 @@ namespace SampleApp.Droid.Services
     {
         public void OnError(OkHiException p0)
         {
-
+            p0?.TrackError();
         }
 
         public void OnResult(Java.Lang.Object p0)
@@ -158,6 +129,7 @@ namespace SampleApp.Droid.Services
             {
                 App.Current.MainPage.DisplayAlert("Error", errorMessage, "OK");
             });
+            p0?.TrackError();
         }
 
         public void OnSuccess(Java.Lang.Object p0, Java.Lang.Object p1)
@@ -190,7 +162,7 @@ namespace SampleApp.Droid.Services
             {
                 App.Current.MainPage.DisplayAlert("Error", errorMessage, "OK");
             });
-
+            p0!.TrackError();
         }
 
         public void OnSuccess(Java.Lang.Object p0)

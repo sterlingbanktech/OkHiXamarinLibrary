@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace SampleApp
         protected void Start(object sender,EventArgs e)
         {
             var okService = DependencyService.Get<IOkLocationService>();
+            AppCenter.SetUserId(entPhoneNumber.Text);
             okService.GetAddress(entPhoneNumber.Text, entFirstName.Text, entLastName.Text);
         }
     }
