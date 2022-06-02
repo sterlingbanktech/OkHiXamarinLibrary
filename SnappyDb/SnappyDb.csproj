@@ -9,9 +9,9 @@
     netstandard1.0;netstandard2.0;MonoAndroid90;Xamarin.iOS10;uap10.0.16299;Xamarin.TVOS10;Xamarin.WatchOS10;Xamarin.Mac20;Tizen40
     For UWP update the version number with a version number you have installed.
     -->
-    <AssemblyName>Plugin.Kryo</AssemblyName>
-    <RootNamespace>Plugin.Kryo</RootNamespace>
-    <PackageId>Plugin.Kryo</PackageId>
+    <AssemblyName>Plugin.SnappyDb</AssemblyName>
+    <RootNamespace>Plugin.SnappyDb</RootNamespace>
+    <PackageId>Plugin.SnappyDb</PackageId>
     
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -35,9 +35,9 @@
     <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
     <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
     <PackageIconUrl>ICON URL</PackageIconUrl>
-    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, Kryo</PackageTags>
+    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, SnappyDb</PackageTags>
     
-    <Title>Kryo Plugin for Xamarin and Windows</Title>
+    <Title>SnappyDb Plugin for Xamarin and Windows</Title>
     <Summary>Summary of nuget</Summary>
     <Description>Plugin Description</Description>
     
@@ -83,10 +83,6 @@
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
     <Compile Include="**\*.apple.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\KryoBinding\KryoBinding.csproj" />
   </ItemGroup>
 
   <!--Additional item groups-->
