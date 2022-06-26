@@ -1,17 +1,17 @@
-<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
 
   <PropertyGroup>
     <!--Work around so the conditions work below-->
-    <TargetFrameworks>netstandard1.0;netstandard2.0;MonoAndroid12.0;</TargetFrameworks>
-    <!--<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard1.0;netsandard2.0;Xamarin.iOS10;MonoAndroid12</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid12</TargetFrameworks>-->
+    <TargetFrameworks>netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid12.0;</TargetFrameworks>
+    <!--<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90</TargetFrameworks>-->
     <!--Feel free to add as many targets as you need below
     netstandard1.0;netstandard2.0;MonoAndroid90;Xamarin.iOS10;uap10.0.16299;Xamarin.TVOS10;Xamarin.WatchOS10;Xamarin.Mac20;Tizen40
     For UWP update the version number with a version number you have installed.
     -->
-    <AssemblyName>Plugin.Kryo</AssemblyName>
-    <RootNamespace>Plugin.Kryo</RootNamespace>
-    <PackageId>Plugin.Kryo</PackageId>
+    <AssemblyName>Plugin.OkHiCore</AssemblyName>
+    <RootNamespace>Plugin.OkHiCore</RootNamespace>
+    <PackageId>Plugin.OkHiCore</PackageId>
     
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -35,9 +35,9 @@
     <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
     <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
     <PackageIconUrl>ICON URL</PackageIconUrl>
-    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, Kryo</PackageTags>
+    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, OkHiCore</PackageTags>
     
-    <Title>Kryo Plugin for Xamarin and Windows</Title>
+    <Title>OkHiCore Plugin for Xamarin and Windows</Title>
     <Summary>Summary of nuget</Summary>
     <Description>Plugin Description</Description>
     
@@ -85,8 +85,8 @@
     <Compile Include="**\*.apple.cs" />
   </ItemGroup>
 
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid'))">
-    <ProjectReference Include="..\KryoBinding\KryoBinding.csproj" />
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <ProjectReference Include="..\OkHiCoreBinding\OkHiCoreBinding.csproj" />
   </ItemGroup>
 
   <!--Additional item groups-->
